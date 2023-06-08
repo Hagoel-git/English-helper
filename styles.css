@@ -1,0 +1,33 @@
+/* styles.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 10px;
+}
+
+.chat {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.messages {
+  margin-bottom: 10px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#message-input {
+  flex: 1;
+  padding: 5px;
+}
+
+.buttons button {
+  margin-left: 5px;
+}
