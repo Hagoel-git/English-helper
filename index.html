@@ -1,29 +1,48 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>English Practice App</title>
+  <title>English Helper</title>
+
+  <link rel="stylesheet" href="static/css/chat.css">
+  <link rel="stylesheet" href="static/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-  <div class="container">
-    <div class="chat" id="chat-container">
-      <!-- Dynamic messages will be added here -->
-    </div>
-    <div class="input-container">
-      <input type="text" id="message-input" placeholder="Type your message..." />
-      <div class="buttons">
-        <button id="send-button"><img src="send-icon.png" alt="Send"></button>
-        <button id="voice-button"><img src="voice-icon.png" alt="Voice Input"></button>
-      </div>
-    </div>
-  </div>
+  
+      <!--  Message Container -->
+      <div class="outer-container">
+        <div class="chat-container">
+            <!-- Messages -->
+            <div id="chatbox">
+              <h5 id="chat-timestamp"></h5>
+              <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+            </div>
 
-  <script src="script.js"></script>
+            <div class="chat-bar-input-block">
+              <div id="userInput">
+                <textarea id="input-prompt" tabindex="0" rows="1" class="input-box" name="msg" autofocus placeholder="Tap 'Enter' to send a message" style="resize:none; max-height: 200px; overflow-y: auto; word-wrap:break-word;"></textarea>
+              </div>
+              <div class="chat-bar-icons">
+                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-microphone" onclick="voiceButton()"></i>
+                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send" onclick="sendButton()"></i>
+              </div>
+            </div>
+
+            <div id="chat-bar-bottom">
+              <p></p>
+            </div>
+        </div>
+      </div>
 </body>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/scripts/responses.js"></script>
+<script src="static/scripts/chat.js"></script>
+<script src="static/scripts/autosize.js"></script>
+<script>
+  autosize(document.querySelectorAll('textarea'));
+</script>
 </html>
