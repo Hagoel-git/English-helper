@@ -1,4 +1,3 @@
-/* styles.css */
 .container {
   display: flex;
   flex-direction: column;
@@ -30,4 +29,18 @@
 
 .buttons button {
   margin-left: 5px;
+}
+
+.message-bubble {
+  display: inline-block;
+  max-width: 90%;
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.right {
+	float: right;
+  
 }
